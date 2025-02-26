@@ -4,7 +4,14 @@
 set -e
 
 # GitHub organization or username where repositories will be created
-GITHUB_ORG="changeme"
+echo -n "Enter GitHub organization name: "
+read GITHUB_ORG
+
+# Validate input
+if [ -z "$GITHUB_ORG" ]; then
+    echo "Error: GitHub organization name cannot be empty"
+    exit 1
+fi
 
 # Check if GitHub CLI is installed and authenticated
 if ! command -v gh &> /dev/null; then
@@ -115,6 +122,3 @@ for repo_url in "${REPOS[@]}"; do
 done
 
 echo "Migration completed!"
-
-
-
