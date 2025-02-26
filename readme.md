@@ -1,6 +1,6 @@
-# Bitbucket to GitHub Migration
+# Bitbucket Cloud to GitHub Migration
 
-This project provides scripts to migrate repositories from Bitbucket to GitHub.
+This project provides scripts to migrate repositories from Bitbucket Cloud to GitHub. This script only migrates the repository contents and does not migrate issues, pull requests, or wiki pages.
 
 ## Overview
 
@@ -47,6 +47,5 @@ The migration is performed in two steps:
 ## Notes
 
 - The script sets the default branch to `master` on GitHub.
-- Modify the GitHub organization or username in `migrate.sh` as needed.
 - Use caution when deleting branches; ensure backups or clones exist if needed.
 
